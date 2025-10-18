@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TODOit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="board">
+    <div class="board__header">
+      <h1 class="board__title">TODOit</h1>
+      <div class="board__title-underline"></div>
+    </div>
+    <div class="board__content">
+      <section class="todo-list" id="todoCard">
+        <div class="todo-list__active">
+          <div class="todo-list__input">
+            <label class="sr-only" for="taskInput">Add a task</label>
+            <input id="taskInput" name="task" type="text" autocomplete="off" spellcheck="false" placeholder="Type a task and press Enter" />
+          </div>
+          <div class="todo-list__lists" aria-live="polite">
+            <ul class="todo-list__items todo-list__items--pending" aria-label="Active tasks"></ul>
+            <div class="todo-list__divider" role="separator" aria-hidden="true"></div>
+            <ul class="todo-list__items todo-list__items--completed" aria-label="Completed tasks"></ul>
+          </div>
+        </div>
+      </section>
+      <section class="todo-tags">
+        <div class="todo-tag">Group</div>
+        <div class="todo-tag">Timed</div>
+        <div class="todo-tag">Corporate</div>
+        <div class="todo-tag">Graphed</div>
+      </section>
+    </div>
+    <div class="board__accent"></div>
+  </div>
+  <script src="script.js" defer></script>
+</body>
+</html>
